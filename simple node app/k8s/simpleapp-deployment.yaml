@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: simple-app
+  template:
+    metadata:
+      # name: simple-app
+      labels:
+        name: simple-app
+    spec:
+      containers:
+      - name: simple-app-container
+        image: anujb2001/simple-app
+        ports:
+          - containerPort: 5000
