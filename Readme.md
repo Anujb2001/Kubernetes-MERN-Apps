@@ -2,48 +2,49 @@
 
 This project is a simple Jokes application built using the MERN stack (MongoDB, Express, React, Node.js) and deployed using Kubernetes.
 
-## Project Structure. 
+## Project Structure
 
-├── Dashboard.yaml 
-├── data/ 
-├── jokes-app-mern-main/ 
-│ ├── jokes-api/ 
-│ │ ├── .dockerignore 
-│ │ ├── .gitignore 
-│ │ ├── app.js 
-│ │ ├── Dockerfile 
-│ │ ├── JokeSchema.js 
-│ │ ├── k8s/ 
-│ │ │ ├── jokes-api-configMap.yaml 
-│ │ │ ├── jokes-api-deployment.yaml 
-│ │ │ ├── jokes-api-service.yaml 
-│ │ ├── package.json 
-│ ├── jokes-client/ 
-│ │ ├── .dockerignore 
-│ │ ├── .gitignore 
-│ │ ├── Dockerfile 
-│ │ ├── k8s/ 
-│ │ │ ├── jokes-client-deployment.yaml 
-│ │ │ ├── jokes-client-service.yaml 
-│ │ ├── package.json 
-│ │ ├── public/ 
-│ │ ├── README.md 
-│ │ ├── src/ 
-│ ├── jokes-db/ 
-│ │ ├── k8s/ 
-│ │ │ ├── host-pv.yaml 
-│ │ │ ├── jokes-db-deployment.yaml 
-│ │ │ ├── jokes-db-service.yaml 
-│ │ │ ├── mongo-pvc.yaml 
-├── simple node app/ 
-│ ├── app.js 
-│ ├── Dockerfile 
-│ ├── k8s/ 
-│ │ ├── simpleapp-deployment.yaml 
-│ │ ├── simpleapp-pod.yaml 
-│ │ ├── simpleapp-service.yaml 
-│ ├── package.json
-
+```
+├── Dashboard.yaml
+├── data/
+├── jokes-app-mern-main/
+│   ├── jokes-api/
+│   │   ├── .dockerignore
+│   │   ├── .gitignore
+│   │   ├── app.js
+│   │   ├── Dockerfile
+│   │   ├── JokeSchema.js
+│   │   ├── k8s/
+│   │   │   ├── jokes-api-configMap.yaml
+│   │   │   ├── jokes-api-deployment.yaml
+│   │   │   ├── jokes-api-service.yaml
+│   │   ├── package.json
+│   ├── jokes-client/
+│   │   ├── .dockerignore
+│   │   ├── .gitignore
+│   │   ├── Dockerfile
+│   │   ├── k8s/
+│   │   │   ├── jokes-client-deployment.yaml
+│   │   │   ├── jokes-client-service.yaml
+│   │   ├── package.json
+│   │   ├── public/
+│   │   ├── README.md
+│   │   ├── src/
+│   ├── jokes-db/
+│   │   ├── k8s/
+│   │   │   ├── host-pv.yaml
+│   │   │   ├── jokes-db-deployment.yaml
+│   │   │   ├── jokes-db-service.yaml
+│   │   │   ├── mongo-pvc.yaml
+├── simple-node-app/
+│   ├── app.js
+│   ├── Dockerfile
+│   ├── k8s/
+│   │   ├── simpleapp-deployment.yaml
+│   │   ├── simpleapp-pod.yaml
+│   │   ├── simpleapp-service.yaml
+│   ├── package.json
+```
 
 ## Prerequisites
 
@@ -59,17 +60,14 @@ This project is a simple Jokes application built using the MERN stack (MongoDB, 
     ```sh
     cd jokes-app-mern-main/jokes-api
     ```
-
 2. Install dependencies:
     ```sh
     npm install
     ```
-
 3. Build Docker image:
     ```sh
     docker build -t jokes-api .
     ```
-
 4. Apply Kubernetes configurations:
     ```sh
     kubectl apply -f k8s/
@@ -77,21 +75,18 @@ This project is a simple Jokes application built using the MERN stack (MongoDB, 
 
 ### Jokes Client
 
-1. Navigate to the [jokes-client](http://_vscodecontentref_/20) directory:
+1. Navigate to the `jokes-client` directory:
     ```sh
     cd jokes-app-mern-main/jokes-client
     ```
-
 2. Install dependencies:
     ```sh
     npm install
     ```
-
 3. Build Docker image:
     ```sh
     docker build -t jokes-client .
     ```
-
 4. Apply Kubernetes configurations:
     ```sh
     kubectl apply -f k8s/
@@ -99,11 +94,10 @@ This project is a simple Jokes application built using the MERN stack (MongoDB, 
 
 ### Jokes Database
 
-1. Navigate to the [jokes-db](http://_vscodecontentref_/21) directory:
+1. Navigate to the `jokes-db` directory:
     ```sh
     cd jokes-app-mern-main/jokes-db
     ```
-
 2. Apply Kubernetes configurations:
     ```sh
     kubectl apply -f k8s/
@@ -117,3 +111,4 @@ This project is a simple Jokes application built using the MERN stack (MongoDB, 
 ## License
 
 This project is licensed under the MIT License.
+
